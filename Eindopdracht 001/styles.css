@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: black;
+}
+
+.window{
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: auto;
+    grid-template-areas: "h" "n" "m" "a" "f";
+}
+
+header{grid-area: h;}
+nav{grid-area: n;}
+main{grid-area: m;}
+aside{grid-area: a;}
+footer{grid-area: f;}
+
+
+body{
+    background-color: black;
+}
+
+button{
+    padding: 2px;
+}
+
+.window, button{
+    background-color: #ccc;
+    border-top : 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+
+header{
+    background-color: darkblue;
+    margin: 2px;
+    padding: 5px;
+}
+
+header h1{
+    font-size: 24px;
+    padding-left: 5px;
+    color: white;
+}
+
+nav, main, aside, footer{
+    margin: 2px;
+    padding: 2px;
+}
+
+nav{
+    padding: 5px;
+}
+
+nav li {
+    display: inline;
+    padding: 5px;
+  }
+
+nav a{
+    color: #000;
+}
+
+nav a:visited{
+    color: #333;
+}
+
+nav a:hover{
+    background-color: #0000ff;
+    color: #fff;
+}
+
+form{
+    padding: 5px;
+    line-height: 2em;
+}
+
+main, aside{
+    background-color: #ddd;
+    border-top : 2px solid black;
+    border-left: 2px solid black;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+}
+
+main li{
+    margin-left: 25px;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+main iframe{
+    width: 560px;
+    height: 315px;
+}
+
+.fists{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-evenly;
+    
+}
+
+aside p{
+    text-align: center;
+}
+
+footer{
+    border: 2px solid gray;
+    margin-top: 4px;
+}
+
+aside p, footer p{
+    font-size: 12px;
+}
+
+
+@media (min-width: 1000px) {
+
+    *{
+        font-size: 24px;
+    }
+
+    .window{
+        grid-template-columns: auto 250px;
+        grid-template-areas: 
+        "h h"
+        "n n"
+        "m a"
+        "f f";
+    }
+
+    body{    
+        padding: 20px;
+        background-color: cadetblue;
+    }
+
+    nav, main, aside, footer{
+        margin: 3px;
+        padding: 3px;
+    }
+
+    header h1{
+        font-size: 36px;
+    }
+
+    aside p, footer p{
+        font-size: 14px;
+    }
+    
+}
+
+
+@media (max-width: 600px) {
+
+    main iframe{
+        width: 373px;
+        height: 210px;
+    }
+    
+}
+
+@media (min-width: 600px) {
+
+    main iframe{
+        width: 560px;
+        height: 315px;
+        }
+    
+}
+
+@media (min-width: 800px) {
+
+    main iframe{
+        width: 747px;
+        height: 420px;
+        }
+    
+}
+
+@media (min-width: 1000px) {
+
+    main iframe{
+        width: 560px;
+        height: 315px;
+        }
+    
+}
+
+@media (min-width: 1100px) {
+
+    main iframe{
+        width: 747px;
+        height: 420px;
+    }
+    
+}
+
+@media (min-width: 1450px) {
+
+    main iframe{
+        width: 1120px;
+        height: 630px;
+    }
+    
+}
+
+@media (min-width: 1600px) {
+
+    .window{
+        width: 1550px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    main iframe{
+        width: 1280px;
+        height: 720px;
+    }
+    
+}
